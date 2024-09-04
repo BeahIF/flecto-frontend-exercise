@@ -1,0 +1,174 @@
+/* styles/globals.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f5fc;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+    padding: 20px;
+
+  }
+  
+  .header {
+    background: #0070f3;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .main-content {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adiciona espaço entre os cards */
+    justify-content: center; 
+  }
+  
+  .planet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+.planet-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f5fc;
+    padding: 20px;
+    position: relative;
+  }
+
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .planet-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .planet-card-detail {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .planet-card h3 {
+    margin: 0 0 1rem;
+  }
+  
+.planet-card h2 {
+    margin-top: 0;
+  }
+  
+  .planet-card p {
+    margin: 10px 0;
+  }
+  
+  .residents, .films {
+    margin-top: 20px;
+  }
+  
+  .residents ul, .films ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .residents li, .films li {
+    margin: 5px 0;
+  }
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem 0;
+  }
+  
+  .pagination-button {
+    background: #0070f3;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .pagination-button:disabled {
+    background: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  .pagination-button:not(:disabled):hover {
+    background: #005bb5;
+  }
+  
+  .pagination-info {
+    font-weight: bold;
+  }
+  
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back-button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .planet-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .planet-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
