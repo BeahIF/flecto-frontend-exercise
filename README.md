@@ -4,7 +4,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, clone this repo and run:
+npm install
+
+so, run the development server:
 
 npm run dev
 
@@ -29,7 +32,9 @@ I started by working on the basics requirements:
 - The user should be able to search for planets;
 - The user should be able to paginate the list of planets;
 - The user should be able to see details about the selected planet.
-  To work on this I needed to check the SWAPI documentation, I used Postman to check how this API works and how the data was formated. So I mounted a Nextjs application, very simple to finish these basic requirement.
-  After that, I read about TanStack Query / SWR to see if was feasible for me trying to use this tool.
-  So, I worked in a nice design using CSS, writed tests and I check if everything was possible to use in a cellphone layout.
-  I will be glad to hear any feedbacks from you !!
+
+To work on this I needed to check the SWAPI documentation, I used Postman to check how this API works and how the data was formated. So I mounted a Nextjs application, very simple to finish these basic requirement.
+After that, I read about TanStack Query / SWR to see if was feasible for me trying to use this tool.
+So, I worked in a nice design using CSS, writed tests and I check if everything was possible to use in a cellphone layout.
+
+I will be glad to hear any feedbacks from you !!
