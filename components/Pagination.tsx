@@ -5,9 +5,7 @@ interface PaginationProps {
   }
   
   const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) => {
-    console.log("no pagination")
-    console.log(currentPage)
-    console.log(totalPages)
+   
     const handlePrevious = () => {
         if (currentPage > 1) {
           onPageChange(currentPage - 1);
@@ -22,7 +20,6 @@ interface PaginationProps {
        return (
       <div className="pagination">
         <button
-        //   onClick={() => onPageChange(currentPage - 1)}
           onClick={handlePrevious}
           disabled={currentPage === 1}
           className="pagination-button"
@@ -31,7 +28,6 @@ interface PaginationProps {
         </button>
         <span  className="pagination-info">{currentPage} / {totalPages}</span>
         <button
-        //   onClick={() => onPageChange(currentPage + 1)}
         onClick={handleNext}
         className="pagination-button"
 

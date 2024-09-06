@@ -4,23 +4,18 @@ import axios from 'axios';
 import { FiArrowLeft } from 'react-icons/fi';
 
 const fetchPlanetDetails = async (name: string) => {
-  console.log(name)
   const response = await axios.get(`https://swapi.dev/api/planets/?search=${name}`);
-  console.log("response")
   const planetData: Planet = response.data.results[0];
 
-  // return response.data.results[0];
 
   const residentsRequests = planetData.residents.map((url: string) => axios.get(url));
   const residentsResponses = await Promise.all(residentsRequests);
   const residents = residentsResponses.map(response => response.data);
   
-  // Buscar os detalhes dos filmes
   const filmsRequests = planetData.films.map((url: string) => axios.get(url));
   const filmsResponses = await Promise.all(filmsRequests);
   const films = filmsResponses.map(response => response.data);
   
-  // Retornar os dados do planeta junto com residentes e filmes
   return {
     ...planetData,
     residents,
@@ -36,7 +31,7 @@ const PlanetDetails = () => {
   const { data, error, isLoading } = useQuery({
     queryKey: ['planet', name],
     queryFn: () => fetchPlanetDetails(name as string),
-    enabled: !!name, // Executa a query apenas quando `name` estiver disponível
+    enabled: !!name, 
   });
 
   if (isLoading) return <p>Loading...</p>;

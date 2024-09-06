@@ -8,13 +8,12 @@ const HomePage = () => {
   const [search, setSearch] = useState('');
   const { data, isLoading, error } = usePlanets(page, search);
 
-  const totalPages = data ? Math.ceil(data.count / 10) : 1; // 10 é o número de itens por página retornados pela API
-
+  const totalPages = data ? Math.ceil(data.count / 10) : 1;
   return (
     <div className="container">
       <header className="header">
         <h1>Star Wars Planets</h1>
-        <SearchBar onSearch={(value) => setSearch(value)} />
+        <SearchBar onSearch={(value) => {setSearch(value),setPage(1)}} />
       </header>
       <main className="main-content">
         {isLoading && <p>Loading...</p>}
